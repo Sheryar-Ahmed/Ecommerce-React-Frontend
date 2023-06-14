@@ -20,7 +20,7 @@ const OrderDetails = () => {
             <Loader />
         </div>
         : !loading
-            && Object.keys(detailOrder).length == 0
+            && Object.keys(detailOrder).length === 0
             ? <span className='w-full h-screen text-center text-2xl text-red'>'No data yet'</span>
             : (detailOrder &&
                 <div className='w-full flex flex-col gap-5 mt-3'>

@@ -27,9 +27,9 @@ const Admin = () => {
 
 
     //getting orders/users/products from the state
-    const { productsList, stock, outStock, productsListLoading, productsListError } = useSelector(state => state.productsList)
-    const { ordersList, totalAmount, ordersListLoading, ordersListError } = useSelector(state => state.ordersList)
-    const { usersList, usersListLoading, usersListError } = useSelector(state => state.usersList)
+    const { productsList, stock, outStock, productsListLoading } = useSelector(state => state.productsList)
+    const { ordersList, totalAmount, ordersListLoading } = useSelector(state => state.ordersList)
+    const { usersList, usersListLoading } = useSelector(state => state.usersList)
 
 
     //chart data for products

@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import {
-    CardElement,
     useStripe,
     useElements,
     CardNumberElement,

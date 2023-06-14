@@ -52,7 +52,7 @@ const Account = () => {
         dispatch(updatedProfile(updatedProfileData));
     };
 
-    const { loading, error, user } = useSelector(state => state.user);
+    const { loading, user } = useSelector(state => state.user);
     //setting public id for removal of the image 
     useEffect(() => {
         if (!loading && user) {

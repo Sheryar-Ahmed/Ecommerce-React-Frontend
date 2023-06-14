@@ -26,6 +26,7 @@ import OrderDetails from './components/OrderDetails.js';
 import ForgotPassword from './components/ForgotPassword';
 import EmailSuccess from './components/EmailSuccess';
 import ResetPassword from './components/ResetPassword.js';
+import NotFound from './components/NotFound.js';
 
 function App() {
   const [stripeKey, setStripeApiKey] = React.useState();
@@ -130,6 +131,10 @@ function App() {
           }
         />
         <Route exact path='/cart' Component={Cart} />
+        <Route
+        path='*'
+          Component={window.location.pathname === "/process/payment" ? null : NotFound}
+        />
       </Routes>
       <Footer />
     </BrowserRouter>

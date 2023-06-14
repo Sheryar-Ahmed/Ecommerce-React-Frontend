@@ -19,7 +19,7 @@ const MyOrder = () => {
     dispatch(getMyOrders());
   }, [dispatch]);
 
-  const { myOrders, loading, error } = useSelector(state => state.myOrders);
+  const { myOrders, loading } = useSelector(state => state.myOrders);
 
 
   const rows = myOrders.map((item) => createData(item._id, item.orderStatus, item.orderItems.length, item.totalPrice, <NavLink to={`/order/${item._id}`}> <Explain /></NavLink>),)

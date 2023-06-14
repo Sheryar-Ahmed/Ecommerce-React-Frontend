@@ -38,7 +38,7 @@ const Users = () => {
     };
     const cell = ['User ID', 'Email', 'Name', 'Role', 'Actions'];
 
-    const { usersList, usersListLoading, usersListError } = useSelector(state => state.usersList);
+    const { usersList, usersListLoading } = useSelector(state => state.usersList);
 
     const rows = usersList.map((item) => createData(item._id,
         item.email,

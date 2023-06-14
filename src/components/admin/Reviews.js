@@ -78,15 +78,15 @@ const Reviews = () => {
                 :
                 <DenseTable rows={rows} cell={cell} />}
         </div>
-        {productReviewListError
+        {(productReviewListError
             ||
-            productReviewList.length < 1
+            productReviewList.length < 1)
             && <div className='w-full flex flex-col items-center justify-center mt-3'>
-                <span className='w-full text-center'>{productReviewListError || productReviewList.length < 1 && "No Review Available Yet"}</span>
+                <span className='w-full text-center'>{(productReviewListError || productReviewList.length < 1) && "No Review Available Yet"}</span>
             </div>}
         {<ModalBasic open={open} setOpen={setOpen} >
             <div className='w-full flex items-center justify-center'>
-                <span>{DelProductReviewError ? DelProductReviewError : DelProductReview && DelProductReview.message}</span>
+                <span>{DelProductReviewError ? DelProductReviewError : (DelProductReview && DelProductReview.message)}</span>
             </div>
         </ModalBasic>}
     </React.Fragment>

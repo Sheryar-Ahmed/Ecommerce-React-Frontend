@@ -95,7 +95,7 @@ export default function UserAuth() {
         if (isAuthenticated) {
             navigate(userRedirectUrl);
         }
-    }, [isAuthenticated, navigate, userRedirectUrl]);
+    }, [isAuthenticated]);
 
     return (
         <Box
