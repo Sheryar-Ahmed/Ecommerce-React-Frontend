@@ -40,7 +40,7 @@ const Orders = () => {
 
     const cell = ['Order ID', 'Status', 'Items Qty', 'Amount', 'Actions'];
 
-    const { ordersList, ordersListLoading, ordersListError } = useSelector(state => state.ordersList)
+    const { ordersList, ordersListLoading } = useSelector(state => state.ordersList)
     const rows = ordersList.map((item) => createData(item._id,
         item.orderStatus,
         item.orderItems.length,

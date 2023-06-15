@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux'
-import { Country, State, City } from 'country-state-city';
+import { Country, State } from 'country-state-city';
 import { saveShippingInfo } from '../actions/addToCart';
 import { useNavigate } from 'react-router-dom';
 import StepperPay from './Stepper';

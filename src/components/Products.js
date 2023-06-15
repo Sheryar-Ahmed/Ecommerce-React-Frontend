@@ -80,7 +80,7 @@ const Products = () => {
     dispatch(getAllProducts(searchParams.get('keyword') || keyword, currentPage, price, category, ratings));
 
   }, [dispatch, searchParamsdb, currentPage, pricedb, category, ratingsdeb]);
-  const { loading, error, product, resultPerPage, productsCount } = useSelector(state => state.products);
+  const { loading, product, resultPerPage, productsCount } = useSelector(state => state.products);
   return (loading
     ? <div className='w-full h-screen relative'><Loader /></div>
     :
